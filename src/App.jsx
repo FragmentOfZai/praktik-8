@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/dashboard";
@@ -9,7 +9,7 @@ import Logout from "./pages/Logout";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={
           <ProtectedRoute>
@@ -22,7 +22,7 @@ const App = () => {
         </Route>
         <Route path='/login' element={<Login />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
